@@ -5,7 +5,8 @@ metadata:
 spec:
   ingressClassName: nginx
   rules:
-  - http:
+  - host: guestbook.fb-uat.odd.works
+    http:  
       paths:
       - path: /
         pathType: Prefix
@@ -13,4 +14,4 @@ spec:
           service:
             name: guestbook-ui
             port:
-              number: 80
+              number: 80     
